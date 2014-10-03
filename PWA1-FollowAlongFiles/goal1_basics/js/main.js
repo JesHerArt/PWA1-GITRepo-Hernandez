@@ -8,6 +8,7 @@
 // self-executing function
 
 // Alert Hello World
+//alert("Hello World");
 
 /* 
 	Variables
@@ -52,31 +53,53 @@
 console.log('------ variables ----------');
 
     //example 1: variables defined properly
+//    var name = "james";
+//    var course = "PWA1";
+//    var month = 3;
+//    console.log ("name: ", name + " / course: ", course + " / month: ", month);
 
 
     //example 2: variables not defined will = "undefined"
-
+//    var name, course, month;
+//    console.log ("name: ", name + " / course: ", course + " / month: ", month);
 
     //example 3: a mix of variables defined and not defined
+//    var name, course = "PWA1", month;
+//    console.log ("name: ", name + " / course: ", course + " / month: ", month);
 
 
     //example 4: declaring multiple variables at once w/ same value
-
+//    var a = b = c = d = 10;
+//    console.log ("a: ", a + " / b: ", b + " / c: ", c + " / d: ", d);
 
 
 // string (definition, concatenation, escape character)
 console.log('------ strings ----------');
 
     //basic string
-
+//    var name = "James Bond";
+//    console.log (name);
 
     //string w/ escape characters " \ "
+//    var testString = "He's in PWA1";
+//    console.log ("Example 1: ", testString);
 
+//    var testString = "I need some \"quotes\" to be here.";
+//    console.log ("Example 2: ", testString);
+
+//    var testString = 'He\'s in PWA1';
+//    console.log ("Example 3: ", testString);
 
     //string w/ escape characters and mixed single/double quotes
+//    var testString = 'he\'s in ' + '"PWA1"';
+//    console.log ("Example 4: ", testString);
+
 
 
     //this example shows that all the "phase" vars above were overwritten
+//    var num = 3;
+//    var testString = 'he\'s in PWA1 ' + num;
+//    console.log ("Example 5: ", testString);
 
 
 
@@ -87,32 +110,58 @@ console.log('------ numbers ----------');
 
 
     //basic math
-
+//    var counter = 10;
+//    console.log ("basic math:", counter + 1);
+//    console.log ("basic math:", counter);
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
+//    var num1 = 10;
+//    var num2 = 5;
+//    num1 += num2;
+//    console.log ("+=: ", num1);
 
 
     //increment or decrement numbers by 1 with ++ or --
+//    var myNum = 5;
+//    console.log ("myNum = ", myNum);
+
+//    myNum++;
+//    console.log ("myNum = ", myNum);
+
+//    myNum--;
+//    console.log ("myNum = ", myNum);
 
     //this decrements right before it is being used
+//    var num = 10;
+//    --num;
+//    console.log ("--counter: ", num);
 
     //this decrements after it is used
+//    num--;
+//    console.log ("counter--: ", num);
 
     //comment out the above example
     //this decrements after it is being used as well
-
+//    console.log ("counter--: ", num--);
+//    console.log ("counter--: ", num);
 
     //add a number to a string is always a string
-
+//    var myStr = "6" + 2;
+//    console.log ("number + strings: ", myStr);
 
     //other math operations will result in a number
-
+//    var myStr = "6" / 2;
+//    console.log ("number / strings: ", myStr);
 
     //order of operations: ( ), *, /, +, -
-
+//    var num = 4 + (6 * 5 - 10) / 5;
+//    console.log ("order of operations: ", num);
 
     //modulo example
+//    var num1 = 10;
+//    var num2 = 3;
+//    console.log ("Remainder: ", num1%num2);
 
 
 // arrays: (definition, indexing, getter/setter)
@@ -152,7 +201,9 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
-
+    var array1 = [10,50,100,200];
+    console.log ("index 1 is: ", array1[1]);
+    console.log ("the sum of all the numbers: ", array1[0] + array1[1] + array1[2] + array1[3]);
 
 /*******************************************
 
@@ -168,6 +219,11 @@ console.log('------ arrays ----------');
     3. output array items using string concatenation
 
  ********************************************/
+    var myArray = new Array();
+    myArray[0] = baseball;
+    myArray[1] = football;
+    myArray[2] = basketball;
+    console.log ("sports: ", myArray[0] + ", ", myArray[1] + ", ", myArray[2]);
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
