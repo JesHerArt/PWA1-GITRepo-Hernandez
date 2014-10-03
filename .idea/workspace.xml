@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e32ecb2-dcee-49da-80da-c67bc46d1974" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" afterPath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/images/fight_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/images/grey_wash_wall.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/js/database.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/js/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/style.css" afterPath="" />
     </list>
     <ignored path="PWA1-GITRepo-Hernandez.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="660">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js">
+        <entry file="file://$PROJECT_DIR$/Wk1/goal1_duel1/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3111111" vertical-offset="0" max-vertical-offset="1305">
-              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+            <state vertical-scroll-proportion="-0.64254063" vertical-offset="930" max-vertical-offset="1620">
+              <caret line="32" column="243" selection-start-line="32" selection-start-column="243" selection-end-line="32" selection-end-column="243" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -64,6 +62,7 @@
         <option value="$PROJECT_DIR$/Wk1/goal1_basics/js/main.js" />
         <option value="$PROJECT_DIR$/PWA1-FollowAlongFiles/goal1_basics/js/main.js" />
         <option value="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" />
+        <option value="$PROJECT_DIR$/Wk1/goal1_duel1/js/main.js" />
       </list>
     </option>
   </component>
@@ -145,7 +144,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="goal1_assign_duel1 FINAL" />
+              <option name="myItemId" value="goal1_duel1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -163,7 +162,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="goal1_assign_duel1 FINAL" />
+              <option name="myItemId" value="goal1_duel1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -182,46 +181,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PWA1-FollowAlongFiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-GITRepo-Hernandez" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-GITRepo-Hernandez" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-FollowAlongFiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goal1_basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-GITRepo-Hernandez" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-GITRepo-Hernandez" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA1-FollowAlongFiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goal1_basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,6 +196,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Wk1/goal3_debug/css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -298,7 +262,7 @@
     <frame x="0" y="22" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -337,14 +301,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PWA1-FollowAlongFiles/goal2_practice/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2192845" vertical-offset="2070" max-vertical-offset="9060">
@@ -360,15 +316,39 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8430">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js">
+    <entry file="file://$PROJECT_DIR$/Wk1/goal1_duel1/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3111111" vertical-offset="0" max-vertical-offset="1305">
-          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wk1/goal1_duel1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wk1/goal3_debug/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wk1/goal1_duel1/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64254063" vertical-offset="930" max-vertical-offset="1620">
+          <caret line="32" column="243" selection-start-line="32" selection-start-column="243" selection-end-line="32" selection-end-column="243" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
