@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e32ecb2-dcee-49da-80da-c67bc46d1974" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_basics/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal1_basics/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal2_practice/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal2_practice/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_bug_scope/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Wk1/goal3_bug_scope/js/main.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" afterPath="$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js" />
     </list>
     <ignored path="PWA1-GITRepo-Hernandez.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,9 +38,11 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="1.3111111" vertical-offset="0" max-vertical-offset="1305">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -370,9 +367,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk1/goal1_assign_duel1 FINAL/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="1.3111111" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
