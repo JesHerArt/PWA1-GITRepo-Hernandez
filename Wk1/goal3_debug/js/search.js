@@ -65,7 +65,6 @@
                 if (compare !== -1) {
                     results.push(db[i]);
                 }
-
             }
         }
 		
