@@ -55,12 +55,12 @@
 
 
             if (result==="no winner"){      //Conditional to check if the result is strictly equal to "no winner".
-                round++;            //Increment the round (global variable) by 1.
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
+                round++;                    //Increment the round (global variable) by 1.
+                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);     //Alert the user of each player's name and health as well as which round has ended.
 
             } else{                 //End of the if statement and begin of the else statement.
                 alert(result);      //Alerting the user of the current result.
-                break;              //Force the loop to break/stop when the condition results in else.
+                break;              //Force the loop to break/stop/end when the condition results in else.
 
             }                       //End of the else statement.
 
@@ -71,25 +71,25 @@
 
     function winnerCheck(){         //Initialize the winnerCheck function
 
-        console.log ("Inside the winnerCheck function");
+        console.log ("Inside the winnerCheck function");    //Logging to the console that we are inside of the winnerCheck function.
 
-        var result="no winner";
+        var result="no winner";     //Declare and define the result variable as "no winner".
 
 
-        if (playerOneHealth<1 && playerTwoHealth<1){
-            result = "You Both Die";
+        if (playerOneHealth<1 && playerTwoHealth<1){        //Conditional to check if both player 1's AND player 2's health are below 1.
+            result = "You Both Die";                        //Define the result as string saying that both players died.
 
-        } else if(playerOneHealth<1){
-            result =playerTwoName+" WINS!!!"
+        } else if(playerOneHealth<1){                       //End of if statement and begin of an else-if statement, to check if player 1's health is below 1.
+            result =playerTwoName+" WINS!!!";               //Define the result as a string saying that player 2 wins.
 
-        } else if (playerTwoHealth<1){
-            result = playerOneName+" WINS!!!"
+        } else if (playerTwoHealth<1){                      //End of else-if statement and begin of another else-if statement, to check if player 2's health is below 1.
+            result = playerOneName+" WINS!!!";              //Define the result as a string saying that player 1 wins.
 
-        }
+        }                                                   //End of the second else-if statement.
 
-        return result;
+        return result;                                      //The functions returns the result variable.
 
-    }       //End of the winnerCheck function.
+    }                                                       //End of the winnerCheck function.
 
 
     /*******  The program gets started below *******/
@@ -98,4 +98,4 @@
 
     fight();        //Invoking the fight function.
 
-})();
+})();       //End of the self-executing function.
