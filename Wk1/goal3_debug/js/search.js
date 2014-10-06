@@ -8,6 +8,8 @@
 // Create privatized scope using a self-executing function
 (function(){        //Self-executing function.
 
+    console.log ("Program begins.");          //Logging to the console that the program has begun.
+
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),        //Define and declare variable by the elements that have the "results" id assigned to it.
 		searchInput = document.forms[0].search,                 //Define and declare variable by search input that the user enters.
@@ -83,7 +85,7 @@
 		
 		// Check that matches were found, and run output functions
 		if(results.length = 0){                                             //Conditional statement to check if the length of the results array is equal to 0.
-			noMatch();                                                      //Invoke the noMatch function.
+            results.length = 0;                                                      //Invoke the noMatch function.
 
 		} else{                                                             //End of if statement. Begin else statement.
 			showMatches(results);                                           //Invoke the showMatches function passing results as an argument.
