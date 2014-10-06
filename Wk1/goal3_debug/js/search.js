@@ -10,7 +10,7 @@
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),        //Define and declare variable by the elements that have the "results" id assigned to it.
-		searchInput = document.forms[0].search,                 //Define and declare variable by search the forms in index 0 of the document.
+		searchInput = document.forms[0].search,                 //Define and declare variable by search input that the user enters.
 		currentSearch = '';                                     //Define and declare variable as a blank string.
 
 	// Validates search query
@@ -69,10 +69,10 @@
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
-                var compare = dbitem.indexOf(qitem);                        //
+                var compare = dbitem.indexOf(qitem);                        //Declare and define the variable as the result of comparing index lengths between the dbitem and the qitem.
 
-                if (compare !== -1) {                                       //
-                    results.push(db[i]);                                    //
+                if (compare !== -1) {                                       //Conditional statement to check if the compare result is strictly not equal to -1.
+                    results.push(db[i]);                                    //Add the string of the current db array index to the results array.
                 }                                                           //End of if statement.
 
             }                                                               //End of inner for loop.
@@ -82,64 +82,71 @@
 		results.sort();                                                     //The data stored in the results array gets sorted.
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){                                             //
-			noMatch();                                                      //
+		if(results.length = 0){                                             //Conditional statement to check if the length of the results array is equal to 0.
+			noMatch();                                                      //Invoke the noMatch function.
 
-		} else{                                                             //
-			showMatches(results);                                           //
-		}                                                                   //
+		} else{                                                             //End of if statement. Begin else statement.
+			showMatches(results);                                           //Invoke the showMatches function passing results as an argument.
+		}                                                                   //End of else statement.
 
 	};                                                                      //End of the search function.
 
 
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
-		var html = ''+
-			'<p>No Results found.</p>'+
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
-		;
-		resultsDIV.innerHTML = html;
-	};
+	var noMatch = function(){                                   //Declare and define the variable as a function.
+
+        console.log ("Inside the noMatch function.");          //Logging to the console that we're inside the noMatch function.
+
+		var html = ''+                                          //Declare and define the variable as strings. which are elements of html.
+			'<p>No Results found.</p>'+                         //Cont. of html definition.
+			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>';     //Cont. of html definition.
+
+		resultsDIV.innerHTML = html;                            //Set the innerHTML content of the resultsDIV element to the content of the html variable.
+	};                                                          //End of the noMatch function.
 
 
 	// Put matches into page as paragraphs with anchors
-	var showMatches = function(results){
-		
+	var showMatches = function(results){                            //Declare and define the variable as a function.
+
+        console.log ("Inside the showMatches function.");          //Logging to the console that we're inside the showMatches function.
+
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>', 
-			title, 
-			url
-		;
+		var html = '<p>Results</p>',                                //Declare and define the variable as a string of html elements.
+			title,                                                  //Declare the title variable.
+			url;                                                    //Declare the url variable.
 		
 		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0, j=results.length; i<j; i++){                   //For loop that iterates through the length of the results array.
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			var titleEnd = results[i].indexOf('|');                 //Declare and define the variable as the index before the | symbol in the string located in the current index of the results array.
+			title = results[i].subString(0, titleEnd);              //Define the variable as a substring from the first index to the index saved in titleEnd, of the current index in the results array.
 			
 			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);       //Define the variable as a substring starting as the index of the | symbol in the string located in the current index of the results array, up to the last index of the string.
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
-		}
+			html += '<p><a href=' + url + '>' + title + '</a></p>';     //Add on to the html variable with a string of the html elements.
+		}                                                           //End of for loop.
 
-		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
+		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.        //Set the innerHTML content of the resultsDIV element to the content of the html variable.
 
-	};
+	};                                                              //End of the showMatches function.
 
 
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-        var query = searchInput.value;
-        validqte(query);
+	document.forms[0].onsubmit = function(){        //Declare and define the variable as a function.
+
+        console.log ("Inside the document.forms[0] function.");          //Logging to the console that we're inside the document.forms[0] function.
+
+        var query = searchInput.value;              //Declare and define the variable as the value of the searchInput variable.
+        validqte(query);                            //Invoke the validqte function passing query as an argument.
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
-        return false;
-    }
+        return false;                               //return false.
+    }                                               //End of the document.forms[0] function.
 
-}();
+}();        //End of self-executing function.
