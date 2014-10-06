@@ -6,36 +6,39 @@
  */
 
 // Create privatized scope using a self-executing function
-(function(){
+(function(){        //Self-executing function.
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),
-		searchInput = document.forms[0].search,
-		currentSearch = '';
+	var resultsDIV = document.getElementById("results"),        //
+		searchInput = document.forms[0].search,                 //
+		currentSearch = '';                                     //Define and declare variable as a blank string.
 
 	// Validates search query
 	var validqte = function(query){
 
+        console.log ("Inside the validqte function.");          //Logging to the console that we're inside the validqte function.
+
 		// Trim whitespace from start and end of search query
-		while (query.charAt(0) = " "){
-			query = query.substring(1, query.length);
+		while (query.charAt(0) = " "){                          //While having a blank character in the first index of the query string is true, the while loop iterates.
+            query = query.substring(1, query.length);           //Query is now defined as the trimmed string to remove the whitespace; the new substring begins at index 1 and ends at the last index (length) of the string.
 		}
 
-		while (query.charAt(query.length-1) === "") {
-            query = query.substring(0, query.length - 1);
+		while (query.charAt(query.length-1) === "") {           //While having a blank character in the last index of the query string is true, the while loop iterates.
+            query = query.substring(0, query.length - 1);       //Query is now defined as the trimmed string to remove the whitespace; the new substring begins at the first index and ends at the index before the last index ( or length) of the string.
         }
 
 		// Check search length, must have 3 characters
-		if (query.length < 3){
-			alert("Your search query is too small, try again.");
+		if (query.length < 3){                                      //Conditional statement to check if the search query string is less that 3 in length.
+			alert("Your search query is too small, try again.");    //Alerting the use that their search query is too small.
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
 		}
 
-		search(query);
+		search(query);      //Invoke the search function, passing it the query argument.
 	};
+
 
 	// Finds search matches
 	var search = function(query){
@@ -79,7 +82,8 @@
 		}
 
 	};
-	
+
+
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){
 		var html = ''+
@@ -88,7 +92,8 @@
 		;
 		resultsDIV.innerHTML = html;
 	};
-	
+
+
 	// Put matches into page as paragraphs with anchors
 	var showMatches = function(results){
 		
@@ -116,7 +121,8 @@
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 
 	};
-	
+
+
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){
