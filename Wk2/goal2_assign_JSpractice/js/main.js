@@ -143,7 +143,34 @@
     console.log("");
     console.log("6. find number and create an array of even or odd numbers");
 
+    var findNum = function (arr, boo){
+        var arr1 = [];
+        var arr2 = [];
 
+        if ( boo == false || boo == null){
+            for(var i = 0; i < arr.length; i++){
+
+                if ( (arr[i] % 2) > 0 ){
+                    arr1.push(arr[i]);
+                }
+
+            }
+
+            return arr1;
+
+        } else {
+            for(var i = 0; i < arr.length; i++){
+
+                if ( (arr[i] % 2) == 0 ){
+                    arr2.push(arr[i]);
+
+                }
+            }
+
+            return arr2;
+        }
+
+    };
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
