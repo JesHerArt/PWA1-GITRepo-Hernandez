@@ -251,35 +251,61 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 // indexOf()
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
+    console.log( arr2.indexOf('c'));
 
 
 // join()
 // Joins all elements of an array into a string.
+    console.log(arr2.join(', ') );
 
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
+  //  var element = arr1.pop();
+  //  console.log(element );
+  //  console.log(arr1 );
+
+    //var element2 = arr1.shift();
+    //console.log(element2 );
+    //console.log( arr1);
 
 
 // push()
 // Adds one or more elements to the end of an array and returns the new
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
+    arr2.push('f');
+    console.log( arr2);
 
+   // var element3 = arr1.unshift('test');
+   // console.log(element3 );
+   // console.log(arr1 );
 
 // reverse()
 // Reverses the order of the elements of an array
 
+    console.log(arr1.reverse() );
 
 // splice()
 // Adds and/or removes elements from an array.
 
+    console.log( arr1);
+    console.log( arr1.splice(4, 2));
+    console.log( arr1);
 
 // forEach()
 // Calls a function for each element in the array.
 
-
+    console.log(arr1 );
+    arr1.forEach(
+        function( element, index, array){
+        console.log('element: ', element );
+        console.log('index: ', index );
+        console.log('array: ', array );
+        console.log(" " );
+        }
+    );
 
 
 /*******************************************
@@ -303,6 +329,20 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined;
 
+    combined = firstQtr.concat(secondQtr);
+    console.log("Concat 2 arrays: ", combined );
+
+    combined = firstQtr.concat(secondQtr, secondHalfYr);
+    console.log("Concat 3 arrays: ", combined );
+
+    console.log("Joined arrays: ", combined.join()  );
+
+    console.log("Took out - ", combined.pop() );
+    console.log("Show Array: ", combined );
+
+    var results = secondHalfYr.slice(2, 4);
+    console.log("Slice: ", results );
+
 
 /*
 	===============================================
@@ -313,6 +353,30 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 */
 
 console.log('------ MORE Operators - typeof() ----------');
+
+    console.log (typeof 5);
+    console.log (typeof "Hi");
+
+    var str1 = "hello";
+    console.log(typeof str1 );
+
+    console.log(typeof true );
+    console.log(typeof false );
+
+    console.log(typeof function(){} );
+
+    console.log(typeof obj1 ); //undefined
+
+    console.log(typeof [1,2,3,4,5] );  //object, not array
+
+    console.log(typeof missingVariable );  //undefined
+
+    if (typeof myString === 'undefined'){
+        console.log("myString is undefined" );
+    } else {
+        console.log("myString is: ", myString );
+    }
+
 
 
 /*
@@ -339,6 +403,31 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
+    var fruit = "Oranges";
+
+    switch (fruit){
+        case "Oranges":
+            console.log("Oranges are $0.59 a pound." );
+            break;
+        case "Apples":
+            console.log("Apples are $0.32 a pound." );
+            break;
+        case "Bananas":
+            console.log("Bananas are $0.48 a pound." );
+            break;
+        case "Cherries":
+            console.log("Cherries are $3.00 a pound." );
+            break;
+        case "Mangoes":
+        case "Papayas":
+            console.log("Mangoes and Papayas are $2.79 a pound." );
+            break;
+        default:
+            console.log("Sorry, we are out of ", fruit + "." );
+    };
+
+
+
 /*******************************************
  STUDENT ACTIVITY 6:
 
@@ -348,6 +437,19 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if age 18 then console.log "adult"
 			if no age then console.log "No answer"
 ********************************************/
+
+    var age = 13;
+
+    switch (age){
+        case 13:
+            console.log("child" );
+            break;
+        case 18:
+            console.log("adult" );
+            break;
+        default:
+            console.log("No answer" );
+    };
 
 
 
@@ -364,6 +466,12 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
+    var bondsCars = function(){
+        return ['ferrari', 'lambo', 'vwBug'];
+    };
+
+    var cars = bondsCars();
+    console.log("James Bond's cars: ", cars );
 
 	/* 
 		Self Executing Functions
@@ -413,6 +521,11 @@ console.log('------ MORE Functions ----------');
 */
 console.log('------ While / Loop ----------');
 
+    var numOfBeers = 10;
+    while ( numOfBeers > 0 ){
+        console.log(numOfBeers + ' kegs on the wall' );
+        numOfBeers--;
+    }
 	
 /*
 	===============================================
@@ -439,6 +552,10 @@ console.log('------ While / Loop ----------');
 console.log('------For Loop ----------');
 
 
+    for ( var beers = 10; beers > 0; beers-- ){
+        console.log(beers + " bottles of beer on the wall." );
+    }
+
 	/* 
 		array.Length
 	
@@ -451,6 +568,8 @@ console.log('------For Loop ----------');
 			- the  .length property returns the count, which would be 5	
 	*/	
 
+    var myNums = [1, 2, 3, 4, 5];
+    console.log('length: ', myNums.length );
 
 	/* 
 		using the for() loop with .length
@@ -459,11 +578,18 @@ console.log('------For Loop ----------');
 			the increment makes it easy to cycle through arrays or objects.  
 		- to cycle through each index of an array, we could use the .length 
 			property, and use the counter i as the index, such as:
+*/
 
-		for ( var i=0; i<myNums.length; i++){
-			console.log( myNums[i] );
+		for ( var i= 0, j=myNums.length; i<j; i++){
+			if ( i === 3){
+                console.log("testing out the break and it broke" );
+                continue;
+            };
+
+            console.log( 'length in for loop: ', myNums[i] );
 		};
 
+/*
 		- however, this is not the most efficient way...
 		- it is inefficient on the CPU
 
@@ -491,6 +617,9 @@ console.log('------For Loop ----------');
 	*/
 
 
+
+
+
 /*******************************************
  STUDENT ACTIVITY 7:
 
@@ -502,6 +631,19 @@ console.log('------For Loop ----------');
 		b.  create a for loop using the faster method (4 parameters)
 			- in the loop just console.log the values
 ********************************************/
+    var characters = ["Superman", "Batman", "Wolverine", "Iceman"];
+
+    console.log(" ");
+
+    for ( var i = 0; i < characters.length; i++){
+        console.log ( characters[i] );
+    }
+
+    console.log(" ");
+
+    for ( var i = 0, j = characters.length; i < j; i++ ){
+        console.log ( characters[i] );
+    }
 
 
 
