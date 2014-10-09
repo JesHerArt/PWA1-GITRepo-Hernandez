@@ -71,7 +71,11 @@
     console.log("");
     console.log("2. concat first and last name");
 
+    var fullName = function(firstname, lastname){
+        var fullName = firstname + " " + lastname;
 
+        return fullName;
+    };
 
     console.log(fullName('James', 'Bond'));
 
@@ -104,7 +108,7 @@
     console.log("");
     console.log("6. find number and create an array of even or odd numbers");
 
-    
+
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
