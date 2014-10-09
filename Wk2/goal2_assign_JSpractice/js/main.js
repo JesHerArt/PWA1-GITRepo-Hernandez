@@ -98,7 +98,19 @@
     console.log("");
     console.log("4. sentence char count");
 
+    var charCount = function (textInput){
+        var textSplit = textInput.split(" ");
 
+        var together = "";
+
+        for ( var i = 0; i < textSplit.length; i++){
+            together += textSplit[i];
+        }
+
+        var count = together.length;
+
+        return count;
+    };
 
     console.log(charCount(ipsum));
 
