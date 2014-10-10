@@ -14,6 +14,9 @@
     var player1 = ["Kabal", 20, 100];       //Declare and define the player1's name, damage and health into an array.
     var player2 = ["Kratos", 20, 100];      //Declare and define the player2's name, damage and health into an array.
 
+    console.log( "Player 1: ", player1[0] + "  Damage: ", player1[1] + "  Health: ", player1[2] );      //Log to the console the details of player 1.
+    console.log( "Player 2: ", player2[0] + "  Damage: ", player2[1] + "  Health: ", player2[2] );      //Log to the console the details of player 2.
+
 /*
 OLD CODE
     //player name
@@ -42,7 +45,7 @@ OLD CODE
 
         for (var i = 0; i < 10; i++)        //For loop used to iterate through the rounds no more than 10 times.
         {
-            console.log(i);     //Logging to the console the count to know which number loop is currently being displayed.
+            console.log("Inside the for loop. Counter: " + i);     //Logging to the console the count to know which number loop is currently being displayed.
 
             //random formula is - Math.floor(Math.random() * (max - min) + min);
             var minDamage1 = player1[1] * .5;        //Declare and define the player 1 minimum damage.
@@ -54,7 +57,7 @@ OLD CODE
             player1[2] -= f1;        //Reduce and update player 1's health (global variable) by the value of the f1 variable result.
             player2[2] -= f2;        //Reduce and update player 2's health (global variable) by the value of the f2 variable result.
 
-            console.log(player1[0] + ": " + player1[2] + " " + player2[0] + ":" + player2[2] );      //Display each player's name and health in the console.
+            console.log(player1[0] + ": " + player1[2] + "   " + player2[0] + ": " + player2[2] );      //Display each player's name and health in the console.
 
             //check for a winner
             var result = winnerCheck();     //Declaring the result (local variable) and defining it as the winnerCheck function, which therefore, invokes the function.
