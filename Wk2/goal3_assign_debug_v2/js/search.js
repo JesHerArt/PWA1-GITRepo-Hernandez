@@ -1,8 +1,8 @@
 /*
  Name: Jessica Hernandez
- Date: October 05, 2014
+ Date: October 10, 2014
  Class & Section:  PWA1 - 2014-01
- Assignment: Homework - Analyze Buggy Search v1
+ Assignment: Homework - Analyze Buggy Search v2
  */
 
 // Create privatized scope using a self-executing function
@@ -16,13 +16,13 @@
 		currentSearch = '';                                     //Define and declare variable as a blank string.
 
 	// Validates search query
-	var validqte = function(query){                             //Declare and define the variable as a function.
+	var validate = function(query){                             //Declare and define the variable as a function.
 
-        console.log ("Inside the validqte function.");          //Logging to the console that we're inside the validqte function.
+        console.log ("Inside the validate function.");          //Logging to the console that we're inside the validate function.
         console.log ("Query: ", query);                         //Logging to the console the current query being passed to the function.
 
 		// Trim whitespace from start and end of search query
-		while (query.charAt(0) = " "){                          //While having a blank character in the first index of the query string is true, the while loop iterates.
+		while (query.charAt(0) === " "){                          //While having a blank character in the first index of the query string is true, the while loop iterates.
             query = query.substring(1, query.length);           //Query is now defined as the trimmed string to remove the whitespace; the new substring begins at index 1 and ends at the last index (length) of the string.
 		}                                                       //End of first while loop.
 
@@ -41,7 +41,7 @@
 
 		search(query);                                              //Invoke the search function, passing it the query argument.
 
-	};                                                              //End of validqte function.
+	};                                                              //End of validate function.
 
 
 	// Finds search matches
@@ -51,7 +51,7 @@
         console.log ("Query: ", query);                                     //Logging to the console the current query being passed to the function.
 
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");                                   //Declare and define the variable as joined/concatenated strings by adding a space in between each string and each word is added to an index of an array.
+		var queryArray = query.split(" ");                                   //Declare and define the variable as splitting the query string and place individual text into an array.
 
 		// array to store matched results from database.js
 		var results = [];                                                   //Declare and define the variable as an array.
@@ -62,16 +62,16 @@
             // each db[i] is a single video item, each title ends with a pipe "|"
             // save a lowercase variable of the video title
             var dbTitleEnd = db[i].indexOf('|');                            //Declare and define the variable as the index before the | symbol in the string located in the current index of the db array.
-            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);      //Declare and define the variable as a substring in lowercase format from the first index to the index saved in dbTitleEnd, of the current index in the db array.
+            var dbItem = db[i].toLowerCase().substring(0, dbTitleEnd);      //Declare and define the variable as a substring in lowercase format from the first index to the index saved in dbTitleEnd, of the current index in the db array.
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
             for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {       //For loop (inner) used to iterate through the queryArray array.
-                var qitem = queryArray[ii].tolowercase();                   //Declare and define the variable as the string in lowercase format that's located in the current index of the queryArray array.
+                var qItem = queryArray[ii].toLowerCase();                   //Declare and define the variable as the string in lowercase format that's located in the current index of the queryArray array.
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
-                var compare = dbitem.indexOf(qitem);                        //Declare and define the variable as the result of comparing index lengths between the dbitem and the qitem.
+                var compare = dbItem.indexOf(qItem);                        //Declare and define the variable as the result of comparing index lengths between the dbItem and the qItem.
 
                 if (compare !== -1) {                                       //Conditional statement to check if the compare result is strictly not equal to -1.
                     results.push(db[i]);                                    //Add the string of the current db array index to the results array.
@@ -123,7 +123,7 @@
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			var titleEnd = results[i].indexOf('|');                 //Declare and define the variable as the index before the | symbol in the string located in the current index of the results array.
-			title = results[i].subString(0, titleEnd);              //Define the variable as a substring from the first index to the index saved in titleEnd, of the current index in the results array.
+			title = results[i].substring(0, titleEnd);              //Define the variable as a substring from the first index to the index saved in titleEnd, of the current index in the results array.
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);       //Define the variable as a substring starting as the index of the | symbol in the string located in the current index of the results array, up to the last index of the string.
@@ -144,11 +144,11 @@
         console.log ("Inside the document.forms[0] function.");          //Logging to the console that we're inside the document.forms[0] function.
 
         var query = searchInput.value;              //Declare and define the variable as the value of the searchInput variable.
-        validqte(query);                            //Invoke the validqte function passing query as an argument.
+        validate(query);                            //Invoke the validate function passing query as an argument.
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
         return false;                               //return false.
-    }                                               //End of the document.forms[0] function.
+    };                                               //End of the document.forms[0] function.
 
 })();        //End of self-executing function.
