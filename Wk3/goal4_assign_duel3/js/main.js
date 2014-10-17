@@ -72,11 +72,6 @@ OLD CODE
 
         console.log ("Inside the fight function");      //Logging to the console that we are inside of the fight function.
 
-/*
-OLD CODE
-        alert(player1[0] + ":" + player1[2] + "  *START*  " + player2[0] + ":" + player2[2] );       //Alerting the user of the initial health power each player has at the beginning of the duel and indicates that it's at the starting point.
-*/
-
         //Displaying the player health
         player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Display the html text of kabal's health.
         player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Display the html text of kratos's health.
@@ -93,11 +88,44 @@ OLD CODE
         players[1].health -= f2;        //Reduce and update kratos's health (global variable) by the value of the f2 variable result.
 
 
-        for (var i = 0; i < 10; i++)        //For loop used to iterate through the rounds no more than 10 times.
-        {
-            console.log("Inside the for loop. Counter: " + i);     //Logging to the console the count to know which number loop is currently being displayed.
+        console.log(players[0].name + ": " + players[0].health + "   " + players[1].name + ": " + players[1].health);       //Display each player's name and health in the console.
+
+
+        //check for a winner
+        var result = winnerCheck();     //Declaring the result (local variable) and defining it as the winnerCheck function, which therefore, invokes the function.
+        console.log(result);            //Logging the current result to the console output.
+
+
+        roundText.innerHTML = "ROUND #" + round + "   Results: ";       //Edit the round number text to display this message in the html text.
+        round++;        //Increment the round (global variable) by 1.
+
+
+        if( result === "no winner"){        //Conditional to check if the result is strictly equal to "no winner".
+            player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
+            player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Update the html text of kratos's health.
+
+        } else {        //End of the if statement and begin of the else statement.
+            player1Text.innerHTML = result;     //Update the html text of kabal to the result.
+            player2Text.innerHTML = "";         //Update the html text of kratos to an empty string.
+
+            button.removeEventListener("click", fight, false);      //Deactivate the event listener on the button.
+
+            document.querySelector('.buttonblue').innerHTML = "DONE!";      //Update the text in the button to read as 'done!' instead of 'fight'.
+
+        }       //End of the else statement.
+
+
 /*
 OLD CODE
+        alert(player1[0] + ":" + player1[2] + "  *START*  " + player2[0] + ":" + player2[2] );       //Alerting the user of the initial health power each player has at the beginning of the duel and indicates that it's at the starting point.
+*/
+
+        for (var i = 0; i < 10; i++)        //For loop used to iterate through the rounds no more than 10 times.
+        {
+/*
+OLD CODE
+            console.log("Inside the for loop. Counter: " + i);     //Logging to the console the count to know which number loop is currently being displayed.
+
             //random formula is - Math.floor(Math.random() * (max - min) + min);
             var minDamage1 = player1[1] * .5;        //Declare and define the player 1 minimum damage.
             var minDamage2 = player2[1] * .5;        //Declare and define the player 2 minimum damage.
@@ -107,14 +135,10 @@ OLD CODE
             //inflict damage
             player1[2] -= f1;        //Reduce and update player 1's health (global variable) by the value of the f1 variable result.
             player2[2] -= f2;        //Reduce and update player 2's health (global variable) by the value of the f2 variable result.
- */
+
 
             console.log(player1[0] + ": " + player1[2] + "   " + player2[0] + ": " + player2[2] );      //Display each player's name and health in the console.
-
-            //check for a winner
-            var result = winnerCheck();     //Declaring the result (local variable) and defining it as the winnerCheck function, which therefore, invokes the function.
-
-            console.log(result);            //Logging the current result to the console output.
+ */
 
 
             if ( result === "no winner" ){      //Conditional to check if the result is strictly equal to "no winner".
