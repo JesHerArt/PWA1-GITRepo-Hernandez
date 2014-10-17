@@ -10,12 +10,22 @@
 
     console.log("FIGHT!!!");            //Log to the console the chant of "FIGHT!!" when the program initiates.
 
+    //DOM Elements
+    var player1Text = document.querySelector("#kabal").querySelector("p");      //Declare and define p1 health text by accessing the paragraph tag of the kabal id.
+    var player2Text = document.querySelector("#kratos").querySelector("p");     //Declare and define p2 health text by accessing the paragraph tag of the kratos id.
+    var roundText = document.getElementById("round_number");                    //Declare and define the round number text by accessing the round number id.
+    var button = document.getElementById("fight_btn");                          //Declare and define the button by accessing the fight button id.
+
+
+/*
+OLD CODE
     //Fighter Information
     var player1 = ["Kabal", 20, 100];       //Declare and define the player1's name, damage and health into an array.
     var player2 = ["Kratos", 20, 100];      //Declare and define the player2's name, damage and health into an array.
 
     console.log( "Player 1: ", player1[0] + "  Damage: ", player1[1] + "  Health: ", player1[2] );      //Log to the console the details of player 1.
     console.log( "Player 2: ", player2[0] + "  Damage: ", player2[1] + "  Health: ", player2[2] );      //Log to the console the details of player 2.
+*/
 
 /*
 OLD CODE
