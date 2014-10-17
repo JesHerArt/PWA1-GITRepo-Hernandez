@@ -8,14 +8,38 @@
 // self-executing function
 (function(){                            //Initialize as a self-executing function.
 
-    console.log("FIGHT!!!");            //Log to the console the chant of "FIGHT!!" when the program initiates.
-
     //DOM Elements
     var player1Text = document.querySelector("#kabal").querySelector("p");      //Declare and define p1 health text by accessing the paragraph tag of the kabal id.
     var player2Text = document.querySelector("#kratos").querySelector("p");     //Declare and define p2 health text by accessing the paragraph tag of the kratos id.
     var roundText = document.getElementById("round_number");                    //Declare and define the round number text by accessing the round number id.
     var button = document.getElementById("fight_btn");                          //Declare and define the button by accessing the fight button id.
+    button.addEventListener("click", fight, false);                             //Add an event listener to the button to respond to the click event.
+    roundText.innerHTML = "Click the 'FIGHT' button to begin the duel!!";       //Edit the html text of the round to show a message.
 
+
+    //Players Information
+    var players = [                     //Declare and define the array that will hold the player objects.
+        {                               //Beginning of object 1 (index 0 of array)
+            name:       "Kabal",        //name property of object 1
+            damage:     20,             //damage property of object 1
+            health:     100             //health property of object 1
+        },                              //End of first object
+
+        {                               //Beginning of object 2 (index 1 of array)
+            name:       "Kratos",       //name property of object 2
+            damage:     20,             //damage property of object 2
+            health:     100             //health property of object 2
+        }                               //End of the second object
+    ];                                  //End of the array variable
+
+
+    //initiate round
+    var round = 1;                        //**FIXED** Declare and define the initial value of round to one. Global variable.
+
+
+    //Update the inner html text on the page for the players
+    player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
+    player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Update the html text of kratos's health.
 
 /*
 OLD CODE
@@ -43,20 +67,37 @@ OLD CODE
 
 */
 
-    //initiate round
-    var round=0;                        //Declare and define the initial value of round to zero. Global variable.
-
 
     function fight(){                   //Initialize the fight function.
 
         console.log ("Inside the fight function");      //Logging to the console that we are inside of the fight function.
 
+/*
+OLD CODE
         alert(player1[0] + ":" + player1[2] + "  *START*  " + player2[0] + ":" + player2[2] );       //Alerting the user of the initial health power each player has at the beginning of the duel and indicates that it's at the starting point.
+*/
+
+        //Displaying the player health
+        player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Display the html text of kabal's health.
+        player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Display the html text of kratos's health.
+
+        //Determine each player's damage
+        var minDamage1 = players[0].damage * 0.5;       //Declare and define kabal's minimum damage.
+        var minDamage2 = players[1].damage * 0.5;       //Declare and define kratos's minimum damage.
+        var p1Damage = Math.floor( Math.random() * ( players[0].damage - minDamage1 ) + minDamage1 );       //Declare and define the variable as the kabal's damage minus their minimum damage, times a random number, plus their minimum damage, and rounded down to the nearest low integer.
+        var p2Damage = Math.floor( Math.random() * ( players[1].damage - minDamage2 ) + minDamage2 );       //Declare and define the variable as the kratos's damage minus their minimum damage, times a random number, plus their minimum damage, and rounded down to the nearest low integer.
+
+
+        //inflict damage
+        players[0].health -= f1;        //Reduce and update kabal's health (global variable) by the value of the f1 variable result.
+        players[1].health -= f2;        //Reduce and update kratos's health (global variable) by the value of the f2 variable result.
+
 
         for (var i = 0; i < 10; i++)        //For loop used to iterate through the rounds no more than 10 times.
         {
             console.log("Inside the for loop. Counter: " + i);     //Logging to the console the count to know which number loop is currently being displayed.
-
+/*
+OLD CODE
             //random formula is - Math.floor(Math.random() * (max - min) + min);
             var minDamage1 = player1[1] * .5;        //Declare and define the player 1 minimum damage.
             var minDamage2 = player2[1] * .5;        //Declare and define the player 2 minimum damage.
@@ -66,6 +107,7 @@ OLD CODE
             //inflict damage
             player1[2] -= f1;        //Reduce and update player 1's health (global variable) by the value of the f1 variable result.
             player2[2] -= f2;        //Reduce and update player 2's health (global variable) by the value of the f2 variable result.
+ */
 
             console.log(player1[0] + ": " + player1[2] + "   " + player2[0] + ": " + player2[2] );      //Display each player's name and health in the console.
 
@@ -132,6 +174,7 @@ OLD CODE
     /*******  The program gets started below *******/
 
     console.log ("Program begins");     //Logging to the console that the program is beginning.
+    console.log("FIGHT!!!");            //Log to the console the chant of "FIGHT!!" when the program initiates.
 
     fight();        //Invoking the fight function.
 
