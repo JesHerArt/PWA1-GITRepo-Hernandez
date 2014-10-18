@@ -8,14 +8,15 @@
 // self-executing function
 (function(){                            //Initialize as a self-executing function.
 
+    console.log ("Program begins");     //Logging to the console that the program is beginning.
+    console.log("FIGHT!!!");            //Log to the console the chant of "FIGHT!!" when the program initiates.
+
     //DOM Elements
     var player1Text = document.querySelector("#kabal").querySelector("p");      //Declare and define p1 health text by accessing the paragraph tag of the kabal id.
     var player2Text = document.querySelector("#kratos").querySelector("p");     //Declare and define p2 health text by accessing the paragraph tag of the kratos id.
     var roundText = document.getElementById("round_number");                    //Declare and define the round number text by accessing the round number id.
     var button = document.getElementById("fight_btn");                          //Declare and define the button by accessing the fight button id.
     button.addEventListener("click", fight, false);                             //Add an event listener to the button to respond to the click event.
-    roundText.innerHTML = "Click the 'FIGHT' button to begin the duel!!";       //Edit the html text of the round to show a message.
-
 
     //Players Information
     var players = [                     //Declare and define the array that will hold the player objects.
@@ -36,6 +37,7 @@
     //initiate round
     var round = 1;                        //**FIXED** Declare and define the initial value of round to one. Global variable.
 
+    roundText.innerHTML = "Click the 'FIGHT' button to begin the duel!!";       //Edit the html text of the round to show a message.
 
     //Update the inner html text on the page for the players
     player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
@@ -77,15 +79,13 @@ OLD CODE
         player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Display the html text of kratos's health.
 
         //Determine each player's damage
-        var minDamage1 = players[0].damage * 0.5;       //Declare and define kabal's minimum damage.
-        var minDamage2 = players[1].damage * 0.5;       //Declare and define kratos's minimum damage.
-        var p1Damage = Math.floor( Math.random() * ( players[0].damage - minDamage1 ) + minDamage1 );       //Declare and define the variable as the kabal's damage minus their minimum damage, times a random number, plus their minimum damage, and rounded down to the nearest low integer.
-        var p2Damage = Math.floor( Math.random() * ( players[1].damage - minDamage2 ) + minDamage2 );       //Declare and define the variable as the kratos's damage minus their minimum damage, times a random number, plus their minimum damage, and rounded down to the nearest low integer.
+        var p1Damage = Math.floor( Math.random() * players[0].damage  + players[0].damage * 0.5 );       //Declare and define the variable as the kabal's damage times a random number, plus kabal's damage times 0.5, and rounded down to the nearest low integer.
+        var p2Damage = Math.floor( Math.random() * players[1].damage  + players[1].damage * 0.5 );       //Declare and define the variable as the kratos's damage times a random number, plus kratos's damage times 0.5, and rounded down to the nearest low integer.
 
 
         //inflict damage
-        players[0].health -= f1;        //Reduce and update kabal's health (global variable) by the value of the f1 variable result.
-        players[1].health -= f2;        //Reduce and update kratos's health (global variable) by the value of the f2 variable result.
+        players[0].health -= p1Damage;        //Reduce and update kabal's health (global variable) by the value of the f1 variable result.
+        players[1].health -= p2Damage;        //Reduce and update kratos's health (global variable) by the value of the f2 variable result.
 
 
         console.log(players[0].name + ": " + players[0].health + "   " + players[1].name + ": " + players[1].health);       //Display each player's name and health in the console.
@@ -104,26 +104,26 @@ OLD CODE
             player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
             player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Update the html text of kratos's health.
 
-        } else {        //End of the if statement and begin of the else statement.
+        } else {                                //End of the if statement and begin of the else statement.
             player1Text.innerHTML = result;     //Update the html text of kabal to the result.
             player2Text.innerHTML = "";         //Update the html text of kratos to an empty string.
 
-            button.removeEventListener("click", fight, false);      //Deactivate the event listener on the button.
+            button.removeEventListener("click", fight, false);              //Deactivate the event listener on the button.
 
             document.querySelector('.buttonblue').innerHTML = "DONE!";      //Update the text in the button to read as 'done!' instead of 'fight'.
 
-        }       //End of the else statement.
+        }                           //End of the else statement.
+
+    }                               //End of the fight function.
 
 
 /*
-OLD CODE
+OLD CODE FOR THE FIGHT FUNCTION
         alert(player1[0] + ":" + player1[2] + "  *START*  " + player2[0] + ":" + player2[2] );       //Alerting the user of the initial health power each player has at the beginning of the duel and indicates that it's at the starting point.
-*/
+
 
         for (var i = 0; i < 10; i++)        //For loop used to iterate through the rounds no more than 10 times.
         {
-/*
-OLD CODE
             console.log("Inside the for loop. Counter: " + i);     //Logging to the console the count to know which number loop is currently being displayed.
 
             //random formula is - Math.floor(Math.random() * (max - min) + min);
@@ -138,7 +138,7 @@ OLD CODE
 
 
             console.log(player1[0] + ": " + player1[2] + "   " + player2[0] + ": " + player2[2] );      //Display each player's name and health in the console.
- */
+
 
 
             if ( result === "no winner" ){      //Conditional to check if the result is strictly equal to "no winner".
@@ -152,8 +152,7 @@ OLD CODE
             }                       //End of the else statement.
 
         }                           //End of the for loop.
-
-    }                               //End of the fight function.
+*/
 
 
     function winnerCheck(){         //Initialize the winnerCheck function
@@ -162,21 +161,36 @@ OLD CODE
 
         var result="no winner";     //Declare and define the result variable as "no winner".
 
+        if( players[0].health < 1 && players[1].health < 1 ){               //Conditional to check if both player 1's AND player 2's health are below 1.
+            result = "You Both Die!!  ..  GAME OVER!!";                     //Define the result as string saying that both players died.
 
-        if ( player1[2] < 1 && player2[2] < 1){            //Conditional to check if both player 1's AND player 2's health are below 1.
-            result = "You Both Die";                       //Define the result as string saying that both players died.
+        } else if( players[0].health <= 0 && players[1].health > 0 ) {      //End of if statement and begin of an else-if statement, to check if player 1's health is below or equal to zero AND if player 2's health is greater than zero.
+            result = players[1].name + " WINS!!";                           //Define the result as a string saying that kratos wins.
 
-        } else if( player1[2] <= 0 && player2[2] > 0 ){    //End of if statement and begin of an else-if statement, to check if player 1's health is below or equal to zero AND if player 2's health is greater than zero.
-            result = player2[0] +" WINS!!!";               //Define the result as a string saying that player 2 wins.
+        } else if( players[1].health<= 0 && players[0].health > 0 ){        //End of else-if statement and begin of another else-if statement, to check if player 2's health is below or equal to 0 AND if player 1's health is greater than zero.
+            result = players[0].name + " WINS!!";                           //Define the result as a string saying that kabal wins.
 
-        } else if ( player2[2] <= 0 && player1[2] > 0 ){   //End of else-if statement and begin of another else-if statement, to check if player 2's health is below or equal to 0 AND if player 1's health is greater than zero.
-            result = player1[0] +" WINS!!!";               //Define the result as a string saying that player 1 wins.
-
-        }                                                  //End of the second else-if statement.
+        }                                                                   //End of the second else-if statement.
 
         return result;                                     //The functions returns the result variable.
 
     }                                                      //End of the winnerCheck function.
+
+
+/*
+OLD CODE FOR THE WINNER CHECK FUNCTION
+    if ( player1[2] < 1 && player2[2] < 1){            //Conditional to check if both player 1's AND player 2's health are below 1.
+        result = "You Both Die";                       //Define the result as string saying that both players died.
+
+    } else if( player1[2] <= 0 && player2[2] > 0 ){    //End of if statement and begin of an else-if statement, to check if player 1's health is below or equal to zero AND if player 2's health is greater than zero.
+        result = player2[0] +" WINS!!!";               //Define the result as a string saying that player 2 wins.
+
+    } else if ( player2[2] <= 0 && player1[2] > 0 ){   //End of else-if statement and begin of another else-if statement, to check if player 2's health is below or equal to 0 AND if player 1's health is greater than zero.
+        result = player1[0] +" WINS!!!";               //Define the result as a string saying that player 1 wins.
+
+    }                                                  //End of the second else-if statement.
+*/
+
 
 /*
 OLD CODE
@@ -195,11 +209,9 @@ OLD CODE
 */
 
 
-    /*******  The program gets started below *******/
-
-    console.log ("Program begins");     //Logging to the console that the program is beginning.
-    console.log("FIGHT!!!");            //Log to the console the chant of "FIGHT!!" when the program initiates.
-
+/*
+OLD CODE
     fight();        //Invoking the fight function.
+*/
 
 })();       //End of the self-executing function.
