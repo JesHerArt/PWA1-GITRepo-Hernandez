@@ -41,7 +41,7 @@
 
     //Update the inner html text on the page for the players
     player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
-    player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Update the html text of kratos's health.
+    player2Text.innerHTML = players[1].name + ": " + players[1].health;     //Update the html text of kratos's health.
 
 /*
 OLD CODE
@@ -76,7 +76,7 @@ OLD CODE
 
         //Displaying the player health
         player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Display the html text of kabal's health.
-        player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Display the html text of kratos's health.
+        player2Text.innerHTML = players[1].name + ": " + players[1].health;     //Display the html text of kratos's health.
 
         //Determine each player's damage
         var p1Damage = Math.floor( Math.random() * players[0].damage  + players[0].damage * 0.5 );       //Declare and define the variable as the kabal's damage times a random number, plus kabal's damage times 0.5, and rounded down to the nearest low integer.
@@ -96,13 +96,13 @@ OLD CODE
         console.log(result);            //Logging the current result to the console output.
 
 
-        roundText.innerHTML = "ROUND #" + round + "   Results: ";       //Edit the round number text to display this message in the html text.
+        roundText.innerHTML = "ROUND #" + round + "   Results";       //Edit the round number text to display this message in the html text.
         round++;        //Increment the round (global variable) by 1.
 
 
         if( result === "no winner"){        //Conditional to check if the result is strictly equal to "no winner".
             player1Text.innerHTML = players[0].name + ": " + players[0].health;     //Update the html text of kabal's health.
-            player2Text.innerHTML = players[1].name + ": " + players[0].health;     //Update the html text of kratos's health.
+            player2Text.innerHTML = players[1].name + ": " + players[1].health;     //Update the html text of kratos's health.
 
         } else {                                //End of the if statement and begin of the else statement.
             player1Text.innerHTML = result;     //Update the html text of kabal to the result.
